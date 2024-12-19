@@ -8,6 +8,6 @@ spec:
   ports:
   - port: 30002
     targetPort: 4200
-    NodePort: 30002
+    nodePort: 30002
   selector:
     app:  frontend-jonas-zubieta-deployment

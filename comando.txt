@@ -22,9 +22,9 @@ kubectl get all -n jonas-zubieta-namespace
 
 ----FIN-----------
 
-kubectl port-forward service/backend-jonas-zubieta-service 8080:8080 -n jonas-zubieta-namespace
+kubectl port-forward service/backend-jonas-zubieta-service 8080:30001 -n jonas-zubieta-namespace
 
-kubectl port-forward service/frontend-jonas-zubieta-service 4200:4200 -n jonas-zubieta-namespace
+kubectl port-forward service/frontend-jonas-zubieta-service 4200:30002 -n jonas-zubieta-namespace
 
 
 kubectl get pods -n jonas-zubieta-namespace
