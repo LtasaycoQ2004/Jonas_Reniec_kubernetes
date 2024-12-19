@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-jonas-zubieta-deployment
+  namespace: jonas-zubieta-namespace
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend-jonas-zubieta-deployment
+  template:
+    metadata:
+      labels:
+        app: frontend-jonas-zubieta-deployment
+    spec:
+      containers:
+      - name: frontend-jonas-zubieta-deployment
+        image: jonaszl/prs2_frontend_casas:terminado
+        env:
+        - name: API_BACKEND
+          valueFrom:
+            secretKeyRef:
+              name: jonas-zubieta-secrets
+              key: API_BACKEND
+      
